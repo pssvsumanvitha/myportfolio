@@ -1,19 +1,14 @@
-
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
     font-family: 'Quicksand', sans-serif;
-
 }
 
 body {
     color: aliceblue;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -37,9 +32,10 @@ header {
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
+
 .navbar a {
     display: inline-block;
-    font-size: 18px; 
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -48,6 +44,7 @@ header {
     opacity: 0;
     animation: slideTop 0.5s ease forwards;
 }
+
 .navbar a:hover {
     color: rgb(182, 28, 182);
 }
@@ -64,37 +61,45 @@ header {
     background-size: cover;
     background-position: center;
 }
+
 .home-context {
     max-width: 600px;
 }
+
 .home-context h3 {
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: 0.7s;
 }
+
 .home-context h1 {
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
+
 .home h1 {
     font-size: 40px;
     font-weight: bold;
 }
+
 .home h3 {
     font-size: 25px;
 }
+
 .home p {
     font-size: 18px;
     line-height: 1.5;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
+
 .home-sci {
     margin-top: 20px;
     display: flex;
     gap: 15px;
 }
+
 .home-sci a {
     display: inline-flex;
     justify-content: center;
@@ -112,16 +117,19 @@ header {
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i)); /* Dynamic animation delay */
 }
+
 .home-sci a:hover {
     background: rgb(182, 28, 182);
     color: #fff;
     border-color: rgb(182, 28, 182);
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
+
 .home-sci a:nth-child(1):hover { background: red; } /* GitHub (Dark) */
 .home-sci a:nth-child(2):hover { background: #0077b5; } /* LinkedIn (Blue) */
 .home-sci a:nth-child(3):hover { background: #ffa116; } /* LeetCode (Orange) */
 .home-sci a:nth-child(4):hover { background: #2ec866; } /* HackerRank (Green) */
+
 .about-btn {
     display: inline-block;
     padding: 12px 30px;
@@ -140,11 +148,13 @@ header {
     animation-delay: 2s;
     box-shadow: 0 0 5px rgb(161, 38, 161);
 }
+
 .about-btn:hover {
     background-color: #6d2699; /* Purple background on hover */
     color: #fff;
     box-shadow: 0 0 15px rgba(155, 77, 202, 0.8), 0 0 25px rgba(155, 77, 202, 0.8); /* Purple glow */
 }
+
 .about-btn::before {
     content: '';
     position: absolute;
@@ -159,17 +169,21 @@ header {
     z-index: -1;
     transition: 0.3s ease-in-out;
 }
+
 .about-btn:hover::before {
     opacity: 0.5;
 }
+
 .home-context h3 span {
     color: rgb(201, 40, 201);
     font-size: 35px;
     font-weight: 700;
 }
+
 .home-context h3:nth-of-type(2) {
     margin-bottom: 10px;
 }
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -180,6 +194,7 @@ header {
         opacity: 1;
     }
 }
+
 @keyframes slideLeft {
     0% {
         transform: translateX(100px);
@@ -190,6 +205,7 @@ header {
         opacity: 1;
     }
 }
+
 @keyframes slideTop {
     0% {
         transform: translateY(100px);
@@ -200,6 +216,7 @@ header {
         opacity: 1;
     }
 }
+
 @keyframes slideBottom {
     0% {
         transform: translateY(-100px);
@@ -209,8 +226,8 @@ header {
         transform: translateY(0px);
         opacity: 1;
     }
-
 }
+
 .about {
     display: flex; /* Use flexbox for easy centering */
     justify-content: center; /* Center horizontally */
@@ -284,29 +301,6 @@ header {
     font-weight:30px;
 }
 
-
-@media (max-width: 768px) {
-    .about {
-        flex-direction: column; /* Stack the content vertically on smaller screens */
-        padding: 50px 5%;
-    }
-
-    .about-img img {
-        max-height: 300px;
-    }
-
-    .about h2 {
-        font-size: 30px;
-    }
-
-    .about h4 {
-        font-size: 20px;
-    }
-
-    .about p {
-        font-size: 16px;
-    }
-}
 .contact {
     display: flex;
     align-items: center;
@@ -400,3 +394,100 @@ header {
     color: #fff;
     transform: scale(1.1); /* Slight scale effect on hover */
 }
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .home {
+        padding: 50px 5% 0;
+    }
+
+    .home h1 {
+        font-size: 30px;
+    }
+
+    .home h3 {
+        font-size: 20px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+
+    .home-sci a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+
+    .about-img img {
+        max-height: 250px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about h4 {
+        font-size: 18px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    .contact {
+        padding: 40px 5%;
+        flex-direction: column;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .contact-icons {
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .contact-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
