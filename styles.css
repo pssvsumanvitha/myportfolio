@@ -235,11 +235,12 @@ header {
     position: relative;
     width: 100%;
     height: 100vh; /* Full height of the viewport */
-    background-image: url('images2.jpg');
+    background-image: url('');
     background-size: cover;
     background-position: center;
     padding: 0 10%; /* Adjust the padding as needed */
     color: white;
+    background-color: black;
     text-align: center; /* Center the text */
     box-sizing: border-box;
 }
@@ -305,12 +306,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('suma1.png');
+    background-image: url('');
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
     padding: 50px 10%;
+    background-color: black;
 }
 
 .contact-content {
@@ -489,5 +491,93 @@ header {
         height: 40px;
         font-size: 20px;
     }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+#skills {
+    width: 80%;
+    margin: 50px auto;
+    background-color:black;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+
+.heading1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+
+.Technical-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e2e2e2;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+}
+
+.bar i {
+    font-size: 30px;
+}
+
+.info {
+    font-size: 1rem;
+    color: #333;
+    margin-left: 10px;
+}
+
+.progress-line {
+    width: 70%; 
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-line span {
+    display: block;
+    height: 100%;
+    width: 0%; 
+    transition: width 0.5s ease;
+}
+
+.python span {
+    background-color: blue;
+}
+
+.java span {
+    background-color: red; 
+}
+
+.html span {
+    background-color: orangered; 
+}
+
+.css span {
+    background-color: yellow; 
+}
+
+.js span {
+    background-color: purple; 
 }
 
